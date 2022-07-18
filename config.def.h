@@ -32,10 +32,11 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
        /* class      instance    title            tags mask  isfloating  isterminal  noswallow  monitor */
-       { "Chromium",  NULL,       NULL,            1 << 8,    0,          0,          -1,        -1 },
-       { "st-256color",       	  NULL,       NULL,            0,         0,          1,           0,        -1 },
-       { "Thunderbird",  NULL,       NULL,            1 << 5,    0,          0,          -1,        -1 },
-       { NULL,       NULL,       "Event Tester",  0,         0,          0,           1,        -1 }, /* xev */
+       { "firefox",  	NULL,   NULL,            1 << 8,    0,          0,          -1,        -1 },
+       { "st-256color", NULL,   NULL,            0,         0,          1,           0,        -1 },
+       { "Thunderbird", NULL,   NULL,            1 << 5,    0,          0,          -1,        -1 },
+       { "Ymuse", 	NULL,	NULL,		 1 << 3,    0,		0,	    -1,	       -1 },
+       { NULL,       	NULL,   "Event Tester",  0,         0,          0,           1,        -1 }, /* xev */
 
 };
 
@@ -68,7 +69,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray2, "-sb", col_gray1, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 /* Networking */
-static const char *wifion[]   = { "connmanctl", "enable", "wifi", NULL };
+static const char *wifion[]   = { "connmanctl", "enable", "wifi",  NULL };
 static const char *wifioff[]  = { "connmanctl", "disable", "wifi", NULL};
 
 static Key keys[] = {
