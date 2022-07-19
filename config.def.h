@@ -12,6 +12,8 @@ static const char col_gray1[]       = "#292a2d";
 static const char col_gray2[]       = "#a9a9b3";
 static const char col_gray3[]       = "#cccccc";
 static const char col_gray4[]       = "#ffffff";
+static const unsigned int baralpha = 0x30;
+static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray2, col_gray1, col_gray1 },
@@ -19,6 +21,12 @@ static const char *colors[][3]      = {
 };
 static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,8}, {2,6}, {0,8}, {0,0} }; /* represents the icon as an array of vertices */
 static const XPoint stickyiconbb    = {4,8};	/* defines the bottom right corner of the polygon's bounding box (speeds up scaling) */
+
+static const unsigned int alphas[][3]      = {
+        /*               fg      bg        border     */
+        [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+        [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
 
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
