@@ -80,7 +80,13 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 /* Networking */
 static const char *wifion[]   = { "connmanctl", "enable", "wifi",  NULL };
-static const char *wifioff[]  = { "connmanctl", "disable", "wifi", NULL};
+static const char *wifioff[]  = { "connmanctl", "disable", "wifi", NULL };
+/* MPC controls */
+static const char *musictoggle[] = { "mpc", "toggle", NULL };
+static const char *nextsong[] = { "mpc", "next", NULL };
+static const char *prevsong[] = { "mpc", "prev", NULL };
+static const char *musicvolup[] = { "mpc", "vol", "+5", NULL };
+static const char *musicvoldown[] = { "mpc", "vol", "-5", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -104,10 +110,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,      togglesticky,   {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
+	/*{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },*/
         { MODKEY,                       XK_n,      togglealttag,   {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -122,6 +128,11 @@ static Key keys[] = {
 	/* My key definitions */
 	{ MODKEY,			XK_F5,	   spawn,	   {.v = wifion } },
 	{ MODKEY|ShiftMask,		XK_F5,	   spawn,	   {.v = wifioff } },
+	{ MODKEY,			XK_F11,	   spawn,	   {.v = musictoggle } },
+	{ MODKEY,			XK_F10,	   spawn,	   {.v = prevsong } },
+	{ MODKEY,			XK_F12,	   spawn,	   {.v = nextsong } },
+	{ MODKEY,			XK_comma,  spawn,	   {.v = musicvoldown } },
+	{ MODKEY,			XK_period, spawn,	   {.v = musicvolup } },
 };
 
 /* button definitions */
