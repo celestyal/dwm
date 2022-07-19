@@ -12,11 +12,12 @@ static const char col_gray1[]       = "#292a2d";
 static const char col_gray2[]       = "#a9a9b3";
 static const char col_gray3[]       = "#cccccc";
 static const char col_gray4[]       = "#ffffff";
-static const unsigned int baralpha = 0x30;
+static const char col_blue[]	    = "#6d9dd5";
+static const unsigned int baralpha = 0x80;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray2, col_gray1, col_gray1 },
+	[SchemeNorm] = { col_blue, col_gray1, col_gray1 },
 	[SchemeSel]  = { col_gray4, col_gray1, col_gray4  },
 };
 static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,8}, {2,6}, {0,8}, {0,0} }; /* represents the icon as an array of vertices */
