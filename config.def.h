@@ -13,7 +13,7 @@ static const char col_gray2[]       = "#a9a9b3";
 static const char col_gray3[]       = "#cccccc";
 static const char col_gray4[]       = "#ffffff";
 static const char col_blue[]	    = "#6d9dd5";
-static const unsigned int baralpha = 0x80;
+static const unsigned int baralpha  = 0x80;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -58,9 +58,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "Tiling",      tile },    /* first entry is default */
+	{ "Floating",      NULL },    /* no layout function means floating behavior */
+	{ "Monocle",      monocle },
 };
 
 /* key definitions */
