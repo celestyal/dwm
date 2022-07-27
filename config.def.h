@@ -6,19 +6,20 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Noto Sans: size 14", "fontawesome:size=14" };
-static const char dmenufont[]       = "Noto Sans: size 14";
-static const char col_gray1[]       = "#292a2d";
-static const char col_gray2[]       = "#a9a9b3";
-static const char col_gray3[]       = "#cccccc";
-static const char col_gray4[]       = "#ffffff";
-static const char col_blue[]	    = "#6d9dd5";
+static const char *fonts[]          = { "Noto Sans: size 10", "fontawesome:size=10" };
+static const char dmenufont[]       = "Noto Sans: size 10";
+static const char col_normfg[]       = "#111111";
+static const char col_normbg[]       = "#f7f7fc";
+static const char col_selfg[]       = "#4183c4";
+static const char col_selbg[]       = "#f7f7fc";
+static const char col_normborder[] = "#000000";
+static const char col_selborder[] = "#ffffff";
 static const unsigned int baralpha  = 0x80;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_blue, col_gray1, col_gray1 },
-	[SchemeSel]  = { col_gray4, col_gray1, col_gray4  },
+	[SchemeNorm] = { col_normfg, col_normbg, col_normborder },
+	[SchemeSel]  = { col_selfg, col_selbg, col_selborder  },
 };
 static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,8}, {2,6}, {0,8}, {0,0} }; /* represents the icon as an array of vertices */
 static const XPoint stickyiconbb    = {4,8};	/* defines the bottom right corner of the polygon's bounding box (speeds up scaling) */
@@ -76,7 +77,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray2, "-sb", col_gray1, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_normbg, "-nf", col_normfg, "-sb", col_selbg, "-sf", col_selfg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 /* Networking */
 static const char *wifion[]   = { "connmanctl", "enable", "wifi",  NULL };
