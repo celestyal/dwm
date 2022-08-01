@@ -8,11 +8,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Linux Biolinum: size 10", "fontawesome:size=10" };
 static const char dmenufont[]       = "Linux Biolinum: size 10";
-static const char col_normfg[]       = "#c6ad75";
+static const char col_normfg[]       = "#c2c1c0";
 static const char col_normbg[]       = "#121212";
 static const char col_selfg[]       = "#9a9a9a";
-static const char col_selbg[]       = "#121212";
-static const char col_normborder[] = "#c6ad75";
+static const char col_selbg[]       = "#680822";
+static const char col_normborder[] = "#c2c1c0";
 static const char col_selborder[] = "#680822";
 static const unsigned int baralpha  = 0x80;
 static const unsigned int borderalpha = OPAQUE;
