@@ -14,7 +14,7 @@ static const char col_selfg[]       = "#9a9a9a";
 static const char col_selbg[]       = "#680822";
 static const char col_normborder[] = "#c2c1c0";
 static const char col_selborder[] = "#680822";
-static const unsigned int baralpha  = 0x80;
+static const unsigned int baralpha  = 0xff;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
