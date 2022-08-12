@@ -8,12 +8,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Libertinus Sans: size 12", "Noto Color Emoji:size=12" };
 static const char dmenufont[]       = "Libertinus Sans: size 12";
-static const char col_normfg[]       = "#c2c1c0";
+static const char col_normfg[]       = "#e2e1e0";
 static const char col_normbg[]       = "#121212";
-static const char col_selfg[]       = "#9a9a9a";
-static const char col_selbg[]       = "#680822";
-static const char col_normborder[] = "#c2c1c0";
-static const char col_selborder[] = "#680822";
+static const char col_selfg[]       = "#f6f6f6";
+static const char col_selbg[]       = "#212124";
+static const char col_normborder[] = "#121212";
+static const char col_selborder[] = "#f6f6f6";
 static const unsigned int baralpha  = 0xff;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
