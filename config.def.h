@@ -6,8 +6,8 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Linux Biolinum: size 10", "fontawesome:size=10" };
-static const char dmenufont[]       = "Linux Biolinum: size 10";
+static const char *fonts[]          = { "Libertinus Sans: size 12", "Noto Color Emoji:size=12" };
+static const char dmenufont[]       = "Libertinus Sans: size 12";
 static const char col_normfg[]       = "#c2c1c0";
 static const char col_normbg[]       = "#121212";
 static const char col_selfg[]       = "#9a9a9a";
@@ -31,8 +31,8 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
-static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tagsalt[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const int momentaryalttags = 0; /* 1 means alttags will show only when key is held down*/
 
 
@@ -47,6 +47,7 @@ static const Rule rules[] = {
        { "Thunderbird", NULL,   NULL,            1 << 5,    0,          0,          -1,        -1 },
        { "Ymuse", 	NULL,	NULL,		 1 << 3,    0,		0,	    -1,	       -1 },
        { "KeePassXC", 	NULL,	NULL,		 1 << 6,    0,		0,	    -1,	       -1 },
+       { "Tor Browser",	NULL,   NULL,            1 << 7,    1,          0,           0,        -1 },
        { NULL,       	NULL,   "Event Tester",  0,         0,          0,           1,        -1 }, /* xev */
 
 };
@@ -88,6 +89,9 @@ static const char *nextsong[] = { "mpc", "next", NULL };
 static const char *prevsong[] = { "mpc", "prev", NULL };
 static const char *musicvolup[] = { "mpc", "vol", "+5", NULL };
 static const char *musicvoldown[] = { "mpc", "vol", "-5", NULL };
+/* Other */
+static const char *brightness_up[] = { "xbacklight", "-inc", "5", NULL };
+static const char *brightness_down[] = { "xbacklight", "-dec", "5", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -133,7 +137,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_F10,	   spawn,	   {.v = prevsong } },
 	{ MODKEY,			XK_F12,	   spawn,	   {.v = nextsong } },
 	{ MODKEY,			XK_comma,  spawn,	   {.v = musicvoldown } },
-	{ MODKEY,			XK_period, spawn,	   {.v = musicvolup } },
+	{ MODKEY,			XK_F9,	   spawn,	   {.v = brightness_up } },
+	{ MODKEY,			XK_F8, 	   spawn,	   {.v = brightness_down } },
 };
 
 /* button definitions */
