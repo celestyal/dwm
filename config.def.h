@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -43,7 +43,7 @@ static const Rule rules[] = {
 	 */
        /* class      instance    title            tags mask  isfloating  isterminal  noswallow  monitor */
        { "firefox",  	NULL,   NULL,            1 << 8,    0,          0,          -1,        -1 },
-       { "St",		NULL,   NULL,                 0,    0,          1,           0,        -1 },
+       { "st-256color",		NULL,   NULL,                 0,    0,          1,           0,        -1 },
        { "Thunderbird", NULL,   NULL,            1 << 5,    0,          0,          -1,        -1 },
        { "Ymuse", 	NULL,	NULL,		 1 << 3,    0,		0,	    -1,	       -1 },
        { "KeePassXC", 	NULL,	NULL,		 1 << 6,    0,		0,	    -1,	       -1 },
